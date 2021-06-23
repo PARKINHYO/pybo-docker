@@ -4,13 +4,10 @@ services:
   web: 
     container_name: django-pybo
     build: .
-    command: find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
-    command: find . -path "*/migrations/*.pyc" -delete
     command: >
-        bash -c "rm -rf db.sqlite3 
-        && python manage.py makemigrations 
+        bash -c "python manage.py makemigrations 
         && python manage.py migrate
-        && python manage.py collectstatic 
+        && python manage.py collectstatic --noinput 
         && gunicorn --bind 0:8000 config.wsgi:application" 
     volumes: 
       - .:/pybo-docker
