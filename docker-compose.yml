@@ -1,13 +1,25 @@
 version: "3.9"
 
 services: 
+  db: 
+    container_name: postgre-pybo 
+    image: postgres:latest
+    volumes: 
+      - ./data/db:/var/lib/postgresql/data
+    environment: 
+      - PSSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports: 
+      - "5432:5432" 
   web: 
     container_name: django-pybo
     build: .
+    image: django-pybo
     command: >
         bash -c "python manage.py makemigrations 
         && python manage.py migrate
-        && python manage.py collectstatic --noinput 
+        && python manage.py collectstatic --noinput
         && gunicorn --bind 0:8000 config.wsgi:application" 
     volumes: 
       - .:/pybo-docker
@@ -15,7 +27,7 @@ services:
       - "8000:8000" 
   
   proxy: 
-    container_name: proxy-pybo
+    container_name: nginx-pybo
     image: nginx:latest
     ports: 
       - "80:80"
