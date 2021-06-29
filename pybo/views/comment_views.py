@@ -36,7 +36,7 @@ def comment_modify_question(request, comment_id):
     """
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.user != comment.author:
-        messages.error(request, '댓글수정권한이 없습니다')
+        messages.error(request, 'You do not have permission to edit comments.')
         return redirect('pybo:detail', question_id=comment.question.id)
 
     if request.method == "POST":
@@ -61,7 +61,7 @@ def comment_delete_question(request, comment_id):
     """
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.user != comment.author:
-        messages.error(request, '댓글삭제권한이 없습니다')
+        messages.error(request, 'You do not have permission to delete comments.')
         return redirect('pybo:detail', question_id=comment.question_id)
     else:
         comment.delete()
@@ -97,7 +97,7 @@ def comment_modify_answer(request, comment_id):
     """
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.user != comment.author:
-        messages.error(request, '댓글수정권한이 없습니다')
+        messages.error(request, 'You do not have permission to edit comments.')
         return redirect('pybo:detail', question_id=comment.answer.question.id)
 
     if request.method == "POST":
@@ -122,7 +122,7 @@ def comment_delete_answer(request, comment_id):
     """
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.user != comment.author:
-        messages.error(request, '댓글삭제권한이 없습니다')
+        messages.error(request, 'You do not have permission to delete comments.')
         return redirect('pybo:detail', question_id=comment.answer.question.id)
     else:
         comment.delete()
