@@ -69,6 +69,7 @@ $ cat logs/mysite.log
 * Show Like
 * Search & Sort Posts
 * Markdown support when writing
+* Admin(/admin)
 
 <br>
 
