@@ -5,7 +5,7 @@
 
 ## ❓ What is Pybo?
 
-I study [Jump to Django](https://wikidocs.net/book/4223) book and build Django project in container environment. Pybo is the name of the project in the book. The [author](https://github.com/pahkey) of the book is actually running the site after upgrading this Jango project. The source code for each unit of the book is [here](https://github.com/pahkey/djangobook).
+I study [Jump to Django](https://wikidocs.net/book/4223) book and build Django project in container environment. Pybo is the name of the project in the book. The [author](https://github.com/pahkey) of the book is actually running the site after upgrading this DJango project. The source code for each unit of the book is [here](https://github.com/pahkey/djangobook).
 
 <br>
 
