@@ -1,19 +1,15 @@
 <h1 align="center">Welcome to Pybo 👋</h1>
-<p align="center">
-  <a href="https://github.com/PARKINHYO/pybo-docker/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" />
-  </a>  
-</p>
 
-<p align="center">
-<img alt="character" width="300" src="https://user-images.githubusercontent.com/47745785/105130533-8f8bf400-5b2a-11eb-9b33-27e4d68b5736.png" />
-</p>
 
-<br><br>
+## ❓ What is Pybo?
+
+[점프 투 장고](https://wikidocs.net/book/4223) 책을 공부하고 만든 장고 프로젝트를 컨테이너 환경에 구축합니다. Pybo는 책에 나오는 프로젝트 이름입니다. 이 장고 프로젝트를 업그레이드해서 실제로 책의 [저자](https://github.com/pahkey)가 [사이트](https://pybo.kr/pybo/question/list/qna/)를 운영하고 있습니다. 책의 단원별 소스 코드는 [여기](https://github.com/pahkey/djangobook)에 있습니다. 
+
+<br>
 
 ## 📜 Usage
 
-* [도커](https://docs.docker.com/get-started/)와 [도커컴포즈](https://docs.docker.com/compose/install/)를 설치해야 합니다. 
+[도커](https://docs.docker.com/get-started/)와 [도커컴포즈](https://docs.docker.com/compose/install/)를 설치해야 합니다. 
 
 ### 실행
 
@@ -37,6 +33,8 @@ $ docker-compose down
 # 관리자 계정 생성
 $ docker exec -it django-pybo /bin/bash
 $ python manage.py createsuperuser
+...
+$ exit
 ```
 
 ```bash
@@ -53,26 +51,29 @@ $ docker-compose up -d
 $ cat logs/mysite.log
 ```
 
+<br>
 
+## 📌 Architecture
 
-## 📌 Service Flow Chart
+![image](./architecture.png)
 
+<br>
 
-## 📚 출처
+## 🚩 Features
 
+* 회원 로그인 & 로그아웃
+* 질문 및 답변 게시판
+* 질문과 답변 각각에 대해 comment
+* 좋아요 표시
+* 게시글 검색 & 정렬
+* 글 작성시에 마크다운 지원
 
-
-## 🖋 Author
-
-👤 **박인효**
-
-* Mail: [inhyopark122@gmail.com](mailto:inhyopark122@gmail.com)
-* GitHub: [@PARKINHYO](https://github.com/PARKINHYO)
-
+<br>
 
 ## 📝 License
 
-Copyright © 2021 [박인효](https://github.com/parkinhyo).<br/>
+장고 프로젝트의 저작권은 책의 [저자](https://github.com/pahkey)에게 있습니다.<br>
+Copyright © 2021 [IN HYO PARK](https://github.com/parkinhyo).<br/>
 This project is [MIT](https://github.com/PARKINHYO/pybo-docker/blob/master/LICENSE) licensed.
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
