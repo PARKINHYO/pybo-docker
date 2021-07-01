@@ -1,5 +1,7 @@
 <h1 align="center">Welcome to Pybo 👋</h1>
+<h3 align="center"><a href="./english.md">English</a></h3>
 
+<br><br>
 
 ## ❓ What is Pybo?
 
@@ -7,7 +9,7 @@
 
 <br>
 
-## 📜 Usage
+## 📜 How to
 
 [도커](https://docs.docker.com/get-started/)와 [도커컴포즈](https://docs.docker.com/compose/install/)를 설치해야 합니다. 
 
@@ -27,7 +29,7 @@ $ docker-compose stop
 $ docker-compose down
 ```
 
-### more..
+### More..
 
 ```bash
 # 관리자 계정 생성
